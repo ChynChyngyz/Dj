@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="./img">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <title>{{ headers_text_title.content  }}</title>
+</head>
+
+<body>
+    <header>
+        <div class="limit">
+            <div class="wrapper">
+                <div class="d-flex header_container">
+                    <div class="header_logo">
+                        <img src="{{ logo.image.url }}" alt="logo">
+                    </div>
+                </div>
+                <div class="header_nav">
+                    <ul class="d-flex flex-center">
+                        <li><a href="#h2YANDEXVORONEZH">{{ menu_about.content }}</a></li>
+                        <li><a href="#h2MOZHEM">{{ menu_services.content }}</a></li>
+                        <li><a href="#sectionOZON">{{ menu_cases.content }}</a></li>
+                        <li><a href="#h1pricing">{{ menu_price.content }}</a></li>
+                        <li><a href="#">{{ menu_articles.content }}</a></li>
+                        <li><a href="#">{{ menu_rp.content }}</a></li>
+                    </ul>
+                </div>
+                <div class="header_number">
+                    <div class="number">
+                      <a href="tel:+84956486550"> {{ phone_number.content }} </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="first">
+            <div class="black-background"></div>
+            <div class="container">
+                <h1 class="first-title">{{ promotion_title.content }}<img src="./img/Яндекс маркет белый 2.png" alt="Яндекс"></h1>
+                <h4 class="f-subtitle">{{ promotion_subtitle.content }}</h4>
+                <div class="telephone">
+                  <p class="tel-text"> {{ promotion_phone.content }}</p>
+                  <hr class="f-line">
+                  <p class="perezvon">Нажимая на кнопку «Перезвоните мне», вы даете согласие на обработку своих персональных данных</p>
+                </div>
+                <div class="first-btn">
+                  <button class="f-btn-active"><b>{{ promotion_button.content }}</b></button>
+                </div>
+            </div>
+          </section>
+
+          <section class="second">
+            <div class="container">
+              <div class="sec-row">
+                <div class="sec-icon">
+                  <img src="./img/tu_tu.png" alt="">
+                  <p class="sec-txt">Увеличение заказов с Я.Маркета</p>
+                </div>
+                <div class="sec-icon">
+                  <img src="./img/love_u.png" alt="">
+                  <p class="sec-txt">Рост числа отзывов и оценок</p>
+                </div>
+                <div class="sec-icon">
+                  <img src="./img/rank_yellow.png" alt="">
+                  <p class="sec-txt">Повышение доли бренда на рынке</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <section class="clients">
+            <div class="logos-container">
+                <div class="logo-box">
+                    <img src="{{ photo.image.url }}" alt="Империя Техно">
+                </div>
+                <div class="logo-box">
+                    <img src="{{ photo1.image.url }}" alt="Weissgauff">
+                </div>
+                <div class="logo-box">
+                    <img src="{{ photo2.image.url }}" alt="Техпорт">
+                </div>
+                <div class="logo-box">
+                    <img src="{{ photo3.image.url }}" alt="Simfer">
+                </div>
+                <div class="logo-box">
+                    <img src="{{ photo4.image.url }}" alt="DeLonghi">
+                </div>
+                <div class="logo-box">
+                    <img src="{{ photo5.image.url }}" alt="ВстройкаСоло">
+                </div>
+                <div class="logo-box">
+                    <img src="{{ photo6.image.url }}" alt="SanBuy">
+                </div>
+                <div class="logo-box">
+                    <img src="{{ photo7.image.url }}" alt="Время ТВ">
+                </div>
+                <div class="logo-box">
+                    <p>и еще более 500 магазинов</p>
+                </div>
+            </div>
+            <div class="lefttextclients">
+                    <span>Наши клиенты</span>
+            </div>
+        </section>
+
+        <section class="ozon-case">
+            <h2 id="sectionOZON">OZON</h2>
+            <div class="case-container">
+                <button class="arrow-btn left">
+                    <img src="./img/left arr.png" alt="left arrow">
+                </button>
+                <div class="case-box">
+                    <div class="case-content">
+                        <div class="case-logo">
+                            <img src="{{ case_logo.image.url }}" alt="Ozon">
+                        </div>
+                        <div class="case-info">
+                            <h3>{{ case_title.content }}</h3>
+                            <p>{{ case_shop.content }}</p>
+                            <p>{{ case_years.content }}</p>
+                        </div>
+                        <div class="case-stats">
+                            <p>{{ case_price.content }}<span class="increase">{{ case_price_plus.content }}</span></p>
+                            <p>{{ case_text.content}}</p>
+                            <p>{{ case_price_second.content }} <span class="increase">{{ case_price_second_plus.content }}</span></p>
+                            <p>{{ case_stock.content }}</p>
+                            <p>{{ case_price_third.content }} <span class="decrease">{{ case_decrease.content }}</span></p>
+                            <p>{{ case_check.content }}</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="arrow-btn right">
+                    <img src="./img/right arr.png" alt="right arrow">
+                </button>
+
+            </div>
+            <div class="carousel-indicators"></div>
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+
+            <div class="lefttextcase">
+                <span>Кейсы</span>
+            </div>
+        </section>
+
+      <section class="achievments">
+        <div class="achievements-container">
+            <div class="headerACH">
+                <h2>Агентство "Шольче" — официальный партнер Яндекс.Маркета для вендоров.</h2>
+                <p>Мы специализируемся на развитии интернет-магазинов и брендов и выстраивании на площадке Я.Маркет всей системы коммуникаций бренда с покупателями.</p>
+                <p>Поможем получить доступ ко всем маркетинговым инструментам платформы, подобрать грамотную стратегию продвижения под цели бренда. От знакомства аудитории с брендом до формирования стойкой лояльности.</p>
+            </div>
+            <div class="statsACH">
+                <h2>В 2021 году мы:</h2>
+                <div class="stat-itemACH">
+                    <p>Вывели бренд в ТОП-10 категории Мелкая бытовая техника для кухни</p>
+                </div>
+                <div class="stat-itemACH">
+                    <ul>
+                        <li>Увеличили занимаемую долю на рынке с 0.5% до 8% по бренду бытовой техники</li>
+                        <li>В 5 раз увеличили приток потенциальных покупателей на карточки товара</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="stepsACH">
+                <div class="stepACH">
+                    <img src="diamond.png" alt="diamond" class="diamond">
+                    <p>Агентство Шольче — партнер и лидер Я.Маркета для в. Специализируемся на развитии интернет-магазинов и брендов.</p>
+                </div>
+                <div class="stepACH">
+                    <img src="diamond.png" alt="diamond" class="diamond">
+                    <p>Поможем получить доступ ко всем маркетинговым инструментам платформы, подобрать грамотную стратегию продвижения под цели бренда.</p>
+                </div>
+                <div class="stepACH">
+                    <img src="diamond.png" alt="diamond" class="diamond">
+                    <p>Уже более 5 лет выстраиваем на площадке Я.Маркет всю систему коммуникации бренда с покупателями.</p>
+                </div>
+                <div class="stepACH">
+                    <img src="diamond.png" alt="diamond" class="diamond">
+                    <p>Работаем с полной воронкой: от знакомства аудитории с брендом до формирования стойкой лояльности.</p>
+                </div>
+            </div>
+            <div class="sidebar">
+                <span>Достижения</span>
+            </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="containerofVORONEZH">
+            <h2 id="h2YANDEXVORONEZH">Воронка взаимодействия производителя со своей целевой аудиторией на yandex-market</h2>
+
+            <div class="funnel-container">
+                <div class="funnel">
+                    <div class="funnel-step step1">Бренд-зона, расширенные карточки товаров, виджеты</div>
+                    <div class="funnel-step step2">Карточки товаров, вопросы и отзывы, статьи и обзоры</div>
+                    <div class="funnel-step step3">Сравнение, рекомендации, продвижение</div>
+                    <div class="funnel-step step4">Отзывы</div>
+                </div>
+
+                <div class="funnel-description">
+                    <p>Подбор товара среди категории или среди аналогов известных брендов</p>
+                    <p>Изучение линейки товаров внутри производителя</p>
+                    <p>Выбор модели и совершение покупки на Я.Маркете</p>
+                    <p>Работа с лояльностью покупателей и сроком жизни клиента</p>
+                </div>
+            </div>
+
+        </div>
+      </section>
+
+      <section class="consultationfin">
+        <div class="consultation-section">
+            <p>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</p>
+            <p>С БРЕНД-МАРКЕТОЛОГОМ</p>
+            <div class="whitelinecta"></div>
+            <button class="cta-button">ОСТАВИТЬ ЗАЯВКУ</button>
+        </div>
+      </section>
+
+<!--    ne    -->
+
+      <section class="Vendors">
+        <div class="containerofVENDORS">
+            <h1 id="h1vendors">Основные инструменты для вендоров</h1>
+
+            <div class="carousel">
+                <button class="arrowvendor left-arrowvendor">
+                    <img src="./img/left arr.png" alt="Левая стрелка">
+                </button>
+
+                <div class="carousel-content">
+                    <img src="{{ carousel.image.url }}" alt="Брендированная витрина" class="screenshot">
+                    <div class="item-details">
+                        <h2>{{ carousel_title.content }}</h2>
+                        <p>{{ carousel_subtitle.content }}</p>
+                        <p>{{ carousel_text.content }}</p>
+                        <hr class="line">
+                        <p id="pcosts">{{ carousel_price.content }}</p>
+                        <!-- <p id="pcosts"> от 60 000 руб. в месяц</p> -->
+                    </div>
+                </div>
+
+                <button class="arrowvendor right-arrowvendor">
+                    <img src="./img/right arr.png" alt="Правая стрелка">
+                </button>
+            </div>
+
+            <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+    </section>
+
+
+      <section class="features">
+        <div class="orange-box">
+            <p class="titleF">
+                Начните получать помощь персонального маркетолога для продвижения бренда в Яндекс.Маркете.
+                Менеджер разработает стратегию роста, спрогнозирует бюджеты и результаты, а также будет в
+                приоритетном порядке решать задачи бренда внутри экосистемы Маркета.
+            </p>
+            <h2 id="MOZHEM">А ЕЩЕ МЫ ДЕЛАЕМ ЭТО</h2>
+            <div class="list-containerF">
+                <div class="list-itemF">
+                    <p><span>1</span> Заведение новых карточек на Маркете. Обновление контента на текущих карточках. В сжатые сроки</p>
+                </div>
+                <div class="list-itemF">
+                    <p><span>2</span> Ежедневное отслеживание нарушителей РРЦ по вашему товару. Наш собственный робот просматривает все карточки товара и всех продавцов на Маркете. Оперативно известим о демпинге!</p>
+                </div>
+                <div class="list-itemF">
+                    <p><span>3</span> Грамотное распределение ставок на товары. Расскажем, как не потратить больше, чем планировали.</p>
+                </div>
+                <div class="list-itemF">
+                    <p><span>4</span> Подготовка отчетов по результатам продвижения категории и отдельных товаров. Научим основам анализа ваших сотрудников!</p>
+                </div>
+                <div class="list-itemF">
+                    <p><span>5</span> Персональный специалист по бренд-продвижению. Поможем с подбором фокус-группы для продвижения. На связи 5 дней в неделю</p>
+                </div>
+                <div class="list-itemF">
+                    <p><span>6</span> Увеличим приток положительных отзывов на Маркет по вашему бренду. Легальным способом!</p>
+                </div>
+                <div class="list-itemF">
+                    <p><span>7</span> Ответим на вопросы и отзывы ваших покупателей. Подробно и грамотно</p>
+                </div>
+                <div class="list-itemF">
+                    <p><span>8</span> Написание и публикация обзорных статей в журнал Яндекс.Маркета</p>
+                </div>
+                <div class="list-itemF">
+                    <p><span>9</span> По запросу предоставим экспертные рекомендации: по качеству и удобству сайта, эффективности работы отдела продаж, стратегии развития компании</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="GrowthM">
+        <div class="containerofGROWTH">
+            <h1 id="h1growth">Рост трафика на карточки товара бренда</h1>
+
+            <div class="carouselM">
+                <button class="arrow left-arrowM">
+                    <img src="./img/left arr.png" alt="Левая стрелка">
+                </button>
+
+                <div class="carousel-contentM">
+                    <img src="./img/схема.png" alt="График" class="screenshotM">
+                    <div class="item-detailsM">
+                        <h2>Как мы измеряем эффективность продвижения?</h2>
+                        <p>На старте согласуется формат отчета и показатели эффективности. Это могут быть: Рост покупателей на карточках товара, охват новой аудитории, увеличение количества заказов, выход товара в топ каталога и др.</p>
+                        <h3>Рост трафика на карточки товара бренда.</h3>
+                        <p>Основной показатель эффективности: увеличение потока целевой аудитории на ваши товарные предложения в Маркете.</p>
+                    </div>
+                </div>
+
+                <button class="arrow right-arrowM">
+                    <img src="./img/right arr.png" alt="Правая стрелка">
+                </button>
+            </div>
+
+            <div class="carousel-indicatorsM">
+                <span class="indicator activeM"></span>
+                <span class="indicatorM"></span>
+                <span class="indicatorM"></span>
+            </div>
+        </div>
+    </section>
+
+<!-- ne -->
+
+    <section class="pricing">
+        <div class="containerpricing">
+            <h1 id="h1pricing">Стоимость услуг по продвижению бренда</h1>
+
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th id="uniquetext">Бюджет на рекламу бренда</th>
+                        <th id="uniquetext1">Стоимость услуг</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>от 100 000 руб.</td>
+                        <td>25 000 ₽ / мес.</td>
+                    </tr>
+                    <tr>
+                        <td>до 100 000 руб.</td>
+                        <td>БЕСПЛАТНО</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="benefits">
+                <div class="benefit-item">
+                    <div class="icon hexagon"><p>Все лайфхаки и инструменты Яндекс-Маркета</p></div>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon hexagon"><p>Персональный бренд-маркетолог всегда на связи</p></div>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon hexagon"><p>Разработка стратегии продвижения перед стартом работ</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="consultationfin">
+        <div class="consultation-section">
+            <p>ХОТИТЕ УВЕЛИЧИТЬ ПРОДАЖИ ВАШЕГО МАГАЗИНА?</p>
+            <p>НАЧНЕМ С БЕСПЛАТНОЙ КОНСУЛЬТАЦИИ !</p>
+            <div class="whitelinecta"></div>
+            <button class="cta-button">ОСТАВИТЬ ЗАЯВКУ</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="containerMAP">
+            <div class="icons23">
+                <div class="icon-block">
+                    <img src="./img/conversation 1.png" alt="Продвижение">
+                    <p>Ответим на все вопросы по продвижению</p>
+                </div>
+                <div class="icon-block">
+                    <img src="./img/money-growth 1.png" alt="Стратегия">
+                    <p>Составим профессиональную стратегию для вашего бренда</p>
+                </div>
+                <div class="icon-block">
+                    <img src="./img/pie-chart 1.png" alt="Digital-маркетинг">
+                    <p>Проконсультируем по Digital-Маркетингу</p>
+                </div>
+            </div>
+
+            <div class="form-containerMAP">
+                <form class="contact-form">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" required placeholder="ИМЯ">
+                    <hr class="lineforcontact">
+
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" required placeholder="E-MAIL">
+                    <hr class="lineforcontact">
+
+                    <label for="phone"></label>
+                    <input type="tel" id="phone" name="phone" required placeholder="ТЕЛЕФОН">
+                    <hr class="lineforcontact">
+
+                    <button type="submit">Назначить встречу</button>
+                    <p class="consent">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных</p>
+                </form>
+
+                <div class="contact-info">
+                    <p><a href="tel:+7 (495) 648-65-70">+7 (495) 648-65-70</a></p>
+                    <p>Telegram: <a href="https://t.me/AnitsAL" target="_blank">@stolyargena</a></p>
+                    <a href="https://yandex.com/maps/213/moscow/house/nagatinskaya_ulitsa_16/Z04YcANiTEIFQFtvfXp2eXRqZA==/?indoorLevel=1&ll=37.642563%2C55.678896&z=20.8" target="
+                    _blank">Москва, ул. Нагатинская д.16</a>
+                    <img src="./img/map 2.png" alt="Карта" class="map">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                <img src="./img/Шольчев.png">
+            </div>
+
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                      <li><a href="#">Услуги</a></li>
+                      <li><a href="#">Кейсы</a></li>
+                      <li><a href="#">Стоимость</a></li>
+                      <li><a href="#">Статьи</a></li>
+                      <li><a href="#">PR-Блог</a></li>
+                </ul>
+                <hr class="line">
+            </div>
+
+            <div class="footer-info">
+                <p><strong>Адрес:</strong> Москва, 1-ый Нагатинский пр., д. 2</p>
+                <hr class="line">
+                <p><strong>Телефон:</strong> 8 (495) 648-65-50</p>
+                <hr class="line">
+                <p><strong>E-mail:</strong> <a href="mailto:info@tushweb.ru">info@tushweb.ru</a></p>
+                <hr class="line">
+            </div>
+
+            </div>
+        <div class="footer-bottom">
+            <p>© 2021 SHOLCHEV</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<!--asdfasd-->
